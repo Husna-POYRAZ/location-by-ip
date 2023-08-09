@@ -1,5 +1,5 @@
 
-# Location Service By IP Projesi
+# Location Service Find By IP Projesi
 
 Proje, IP adresine göre kişilerin bulunduğu yeri tespit eden bir servis olarak tasarlanmıştır. Aşağıda proje yapısı, paketler ve özet açıklamalar yer almaktadır:
 
