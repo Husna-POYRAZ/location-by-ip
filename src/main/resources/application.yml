@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: location-be
+  profiles:
+    active: prod

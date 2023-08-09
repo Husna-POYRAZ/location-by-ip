@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  location:
+    image: husnapoyraz/location-by-ip:0.1
+    container_name: location
+    ports:
+      - "8585:8585"
