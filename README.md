@@ -33,7 +33,7 @@ Proje, temiz ve düzenli bir yapıda geliştirilmiştir. Ana proje klasörü loc
 
 ## Kullanılan Teknolojiler ve Kütüphaneler
 
-- **Java 17:** Java programlama dilinin en son sürümüdür ve geliştiricilere daha güçlü ve verimli bir dil deneyimi sunar. Yeni özellikler ve iyileştirmelerle doludur ve performans açısından da geliştirmeler içerir.
+- **Java 17:** Java programlama dilinin ileri bir sürümüdür ve geliştiricilere daha güçlü ve verimli bir dil deneyimi sunar. Yeni özellikler ve iyileştirmelerle doludur ve performans açısından da geliştirmeler içerir.
 
 - **Spring Boot (Versiyon: 2.5.3):** Spring Boot, Spring ekosistemini kullanarak hızlı ve basit şekilde web uygulamaları, mikro hizmetler ve RESTful API'ler oluşturmayı kolaylaştıran bir framework'tür. Spring Boot, otomatik yapılandırma ve hazır özellikler sağlayarak geliştirme sürecini hızlandırır ve geliştiricilere kod tekrarını önlemeye odaklanmalarına olanak tanır.
 
@@ -47,7 +47,7 @@ Proje, temiz ve düzenli bir yapıda geliştirilmiştir. Ana proje klasörü loc
 
 ## Kullanım Notları
 - Proje, IP adresine göre konum bilgilerini elde etmek için MaxMind GeoIP2 kütüphanesini kullanır.
-- MMDB dosyası olmadan proje kullanılamaz. Bu nedenle projenin çalışması için GeoLite2-City.mmdb dosyasının projenin asset klasöründe bulunması gerekmektedir.
+- MMDB dosyası olmadan proje kullanılamaz. Bu nedenle projenin çalışması için [GeoLite2-City.mmdb](https://www.maxmind.com/en/accounts/887440/geoip/downloads) dosyasının projenin asset klasöründe bulunması gerekmektedir.
 - Servis geçerli bir IP adresiyle çağrıldığında konum bilgilerini döndürürken, geçersiz veya hatalı bir IP adresiyle çağrıldığında **"Hata: Konum bilgisi alınamadı."** bilgisiyle 500 Internal Server Error dönecektir.
 
 
@@ -190,7 +190,7 @@ Katkılarınızı bekleriz! Lütfen pull request göndererek projeye katkıda bu
 
 ## Geri Bildirim
 
-Herhangi bir geri bildiriminiz varsa, lütfen husnapoyraz@gmail.com adresinden bize ulaşın.
+Herhangi bir geri bildiriminiz varsa, lütfen bilgiteknolojileri@cbfo.gov.tr adresinden bize ulaşın.
 
 ## Teşekkürler
 Bu proje, topluluk katkıları ve açık kaynak yazılımlar kullanılarak geliştirilmiştir. Bu nedenle projenin geliştirilmesine katkıda bulunan herkese teşekkür ederiz.
