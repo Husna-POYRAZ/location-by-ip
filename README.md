@@ -190,7 +190,7 @@ Katkılarınızı bekleriz! Lütfen pull request göndererek projeye katkıda bu
 
 ## Geri Bildirim
 
-Herhangi bir geri bildiriminiz varsa, lütfen bilgiteknolojileri@cbfo.gov.tr adresinden bize ulaşın.
+Herhangi bir geri bildiriminiz varsa, lütfen husnapoyraz88@gmail.com adresinden bize ulaşın.
 
 ## Teşekkürler
 Bu proje, topluluk katkıları ve açık kaynak yazılımlar kullanılarak geliştirilmiştir. Bu nedenle projenin geliştirilmesine katkıda bulunan herkese teşekkür ederiz.
