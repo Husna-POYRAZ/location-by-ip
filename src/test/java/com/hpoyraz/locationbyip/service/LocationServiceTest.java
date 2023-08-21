@@ -19,44 +19,32 @@ public class LocationServiceTest {
     }
 
     @Test
-    public void shouldReturnLocationForValidIP() {
+    public void shouldReturnLocationForValidIP() throws IOException, GeoIp2Exception {
         String validIpAddress = "123.45.67.89";
-        try {
-            Location location = locationService.getLocationByIP(validIpAddress);
+        Location location = locationService.getLocationByIP(validIpAddress);
 
-            assertEquals(validIpAddress, location.getIp());
-            assertNotNull(location.getNetwork());
-            assertNotNull(location.getCountryName());
-            assertNotNull(location.getContinentName());
-            assertNotNull(location.getContinentCode());
-            assertNotNull(location.getTimeZone());
-            assertNotNull(location.getCity());
-        } catch (IOException | GeoIp2Exception e) {
-            System.out.println("Something went wrong: " + e.getMessage());
-        }
+        assertEquals(validIpAddress, location.getIp());
+        assertNotNull(location.getNetwork());
+        assertNotNull(location.getCountryName());
+        assertNotNull(location.getContinentName());
+        assertNotNull(location.getContinentCode());
+        assertNotNull(location.getTimeZone());
+        assertNotNull(location.getCity());
     }
 
     @Test
-    public void shouldReturnNullForInvalidIP() {
+    public void shouldReturnNullForInvalidIP() throws IOException, GeoIp2Exception {
         String invalidIpAddress = "192.168.1.1";
-        try {
-            Location location = locationService.getLocationByIP(invalidIpAddress);
+        Location location = locationService.getLocationByIP(invalidIpAddress);
 
-            assertNull(location);
-        } catch (IOException | GeoIp2Exception e) {
-            System.out.println("Something went wrong: " + e.getMessage());
-        }
+        assertNull(location);
     }
 
     @Test
-    public void shouldReturnNullForNullIP() {
-        try {
-            Location location = locationService.getLocationByIP(null);
+    public void shouldReturnNullForNullIP() throws IOException, GeoIp2Exception {
+        Location location = locationService.getLocationByIP(null);
 
-            assertNull(location);
-        } catch (IOException | GeoIp2Exception e) {
-            System.out.println("Something went wrong: " + e.getMessage());
-        }
+        assertNull(location);
     }
 }
 
