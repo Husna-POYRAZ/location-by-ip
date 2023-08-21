@@ -29,7 +29,7 @@ public class LocationService {
         Location location = new Location();
         location.setIp(ipAddress);
         location.setNetwork(String.valueOf(response.getTraits().getNetwork()));
-        location.setCountryName(response.getCountry().getName().equals("Turkey") ? "Türkiye" : response.getCountry().getName());
+        location.setCountryName(country.getName().equals("Turkey") ? "Türkiye" : country.getName());
 
         String cityName = response.getCity().getName();
         if (!subdivisionList.isEmpty()) {
