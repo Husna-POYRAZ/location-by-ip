@@ -1,38 +1,39 @@
 package com.hpoyraz.locationbyip.exception;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import java.io.IOException;
-import java.net.UnknownHostException;
-
 @ControllerAdvice
+@Slf4j
 public class GlobalExceptionHandler {
     @ExceptionHandler(LocationGeoIp2Exception.class)
     public ResponseEntity<String> handleGeoIp2Exception(LocationGeoIp2Exception ex) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+        String errorMessage = "Error: Location information not found.";
+        log.error(ex.getMessage());
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMessage);
     }
 
     @ExceptionHandler(LocationIOException.class)
     public ResponseEntity<String> handleIOException(LocationIOException ex) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
-    }
-
-    @ExceptionHandler(UnknownHostException.class)
-    public ResponseEntity<String> handleUnknownHostException(UnknownHostException ex) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+        String errorMessage = "Error: Input/Output error has occurred.";
+        log.error(ex.getMessage());
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMessage);
     }
 
     @ExceptionHandler(DistrictnameNotFoundException.class)
-    public ResponseEntity<String> handleDistrictNameNotFoundException(DistrictnameNotFoundException ex) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+    public ResponseEntity<String> handeleDistrictnameNotFoundException(DistrictnameNotFoundException ex) {
+        String errorMessage = "Error: District name not found.";
+        log.error(ex.getMessage());
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMessage);
     }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleException(Exception ex) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+        String errorMessage = "Something went wrong.";
+        log.error(ex.getMessage());
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMessage);
     }
 }
-

@@ -4,6 +4,7 @@ import com.hpoyraz.locationbyip.model.Location;
 import com.hpoyraz.locationbyip.service.impl.LocationService;
 import com.hpoyraz.locationbyip.util.constants.ApiConstants;
 import lombok.RequiredArgsConstructor;;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,8 +17,8 @@ public class LocationController {
     private final LocationService locationService;
 
     @GetMapping("/{ipAddress}")
-    public Location getLocationByIP(@PathVariable String ipAddress) {
-        return locationService.getLocationByIP(ipAddress);
+    public ResponseEntity<Location> getLocationByIP(@PathVariable String ipAddress) {
+        return ResponseEntity.ok(locationService.getLocationByIP(ipAddress));
     }
 
 }

@@ -20,9 +20,10 @@ Proje, temiz ve düzenli bir yapıda geliştirilmiştir. Ana proje klasörü loc
                 - **util:** Yardımcı fonksiyonların bulunduğu pakettir.
                   - **constants:** Sabit verilerin ve yapılandırmaların yer aldığı paket. 
         - **resources:** Bu klasörde, farklı ortamlar için yapılandırma dosyaları yer almaktadır.
-          - **application.yml:** Genel yapılandırma ayarları.
-          - **application-dev.yml:**  Geliştirme ortamı yapılandırma ayarları.
-          - **application-prod.yml:** Prodüksiyon ortamı yapılandırma ayarları.
+          - **application.yml:** Genel yapılandırma ayarları burada yer alır. Bu dosya, tüm ortamlar için varsayılan yapılandırmaları içerir.
+          - **application-dev.yml:**  Geliştirme (development) ortamı için yapılandırma ayarlarını içerir. 
+          - **application-prod.yml:** Üretim (production) ortamı için yapılandırma ayarlarını içerir. Bu dosya, canlı üretim sunucusunda çalışan uygulama için yapılandırma ayarlarını içerir.
+          - **logback-spring.xml:** Logback kütüphanesini kullanarak uygulamanın günlükleme (logging) yapılandırmasını tanımlar.
     - **test:** Ana uygulama kaynak kodlarına ait testler bu klasörde yer alır.
       - **java:** Java kaynak kodları bu klasör altında bulunur.
           - **com.hpoyraz.locationbyip:** Java paketi, uygulama test sınıflarını içerir.
