@@ -2,6 +2,7 @@ package com.hpoyraz.locationbyip.service.impl;
 
 import com.hpoyraz.locationbyip.exception.LocationGeoIp2Exception;
 import com.hpoyraz.locationbyip.exception.LocationIOException;
+import com.hpoyraz.locationbyip.service.interfaces.ILocationService;
 import com.hpoyraz.locationbyip.util.constants.DatabaseConstants;
 import com.hpoyraz.locationbyip.exception.DistrictnameNotFoundException;
 import com.hpoyraz.locationbyip.model.Location;
@@ -18,7 +19,10 @@ import java.net.InetAddress;
 import java.util.List;
 
 @Service
-public class LocationService {
+public class LocationService implements ILocationService {
+
+
+    @Override
     public Location getLocationByIP(String ipAddress) {
         try {
             File database = new File(DatabaseConstants.dbLocation);
